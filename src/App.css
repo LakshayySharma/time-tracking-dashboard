@@ -10,6 +10,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: var(--font-fam);
 }
 
 main {
@@ -22,7 +23,7 @@ main {
 }
 
 .wrapper {
-  width: 75%;
+  width: 70%;
   display: grid;
   grid-template-columns: 1fr 3fr;
   column-gap: 1.5rem;
@@ -33,6 +34,42 @@ main {
   border-radius: 1rem;
 }
 
+.profile-main {
+  padding: 1.5rem;
+  background-color: var(--primary);
+  border-radius: 1rem;
+  color: var(--pale-blue);
+}
+
+.profile-img {
+  /* margin-top: 1rem; */
+}
+.profile-img img {
+  height: 3.5rem;
+  border: 0.2rem solid #fff;
+  border-radius: 4rem;
+}
+
+.profile-content {
+  margin-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.profile-menu {
+  /* gap: 1rem; */
+  padding: 1.5rem;
+  font-size: 1rem;
+  color: var(--desaturated-blue);
+}
+
+.profile-menu p:hover {
+  color: var(--pale-blue);
+}
+
+.profile-menu p {
+  margin-top: 1rem;
+  cursor: pointer;
+}
 .tracker {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -40,26 +77,84 @@ main {
 }
 
 .card {
-  height: 50px;
   background-color: var(--dark-blue);
   border-radius: 1rem;
 }
 /* how to make css grid? */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 900px) {
+  .wrapper {
+    max-width: 70%;
+    margin: 2rem 0rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+  }
+  .tracker {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .profile-menu {
+    /* gap: 1rem; */
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--desaturated-blue);
+  }
+  .profile-content {
+    text-align: center;
+  }
+  .profile-img {
+    display: flex;
+    justify-content: center;
   }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 376px) {
+  .wrapper {
+    margin: 2rem 0rem;
+    max-width: 70%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+  .tracker {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
   }
-}
 
-@media (min-width: 768px) {
+  .profile-menu {
+    /* gap: 1rem; */
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--desaturated-blue);
+  }
+  .prof {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+  }
+  .profile-img img {
+    height: 3.5rem;
+    border: 0.2rem solid #fff;
+    border-radius: 4rem;
+  }
+
+  .profile-content {
+    margin-top: 0rem;
+    padding-bottom: 0rem;
+    text-align: left;
+  }
+  .profile-content h1 {
+    font-size: 1rem;
+  }
+  .profile-content p {
+    font-size: 0.6rem;
+  }
 }

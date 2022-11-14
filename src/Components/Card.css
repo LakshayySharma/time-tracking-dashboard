@@ -4,6 +4,11 @@
   background-color: hsl(15, 100%, 70%);
   position: relative;
 }
+
+.card:hover .card-content {
+  background-color: hsl(235, 44%, 34%);
+  cursor: pointer;
+}
 .card-content {
   height: 80%;
   width: 100%;

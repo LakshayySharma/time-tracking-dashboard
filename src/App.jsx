@@ -1,13 +1,11 @@
 import "./App.css";
 import Cards from "./Components/Cards";
 import img from "./images/image-jeremy.png";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function App() {
   const [timeFrame, settimeFrame] = useState("daily");
-  useEffect(() => {
-    console.log(timeFrame);
-  });
+
   return (
     <>
       <main>

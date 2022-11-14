@@ -8,7 +8,6 @@ import socialIcon from "../images/icon-social.svg";
 import selfCareIcon from "../images/icon-self-care.svg";
 
 const Card = (props) => {
-  console.log(props);
   let bg = "";
   let img;
   let ptext;
